@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/main.css" />
+    <link rel="stylesheet" href="../static/css/reset.css" />
+
+    <title>第七次全国人口普查可视化</title>
+</head>
+
+<body>
+    <nav class="menu">
+        <ol>
+            <li id="content1" class="menu-item active">
+                <a href="javascript:void(0);">第七次全国人口普查可视化</a>
+            </li>
+            <li id="content2" class="menu-item">
+                <a href="javascript:void(0);">全国人口情况</a>
+            </li>
+            <li id="content3" class="menu-item">
+                <a href="javascript:void(0);">地区人口情况</a>
+            </li>
+            <li id="content4" class="menu-item">
+                <a href="javascript:void(0);">人口性别构成情况</a>
+            </li>
+            <li id="content5" class="menu-item">
+                <a href="javascript:void(0);">人口年龄构成情况</a>
+            </li>
+            <li id="content6" class="menu-item">
+                <a href="javascript:void(0);">人口受教育程度情况</a>
+            </li>
+            <li id="content7" class="menu-item">
+                <a href="javascript:void(0);">城乡人口和流动人口情况</a>
+            </li>
+        </ol>
+    </nav>
+
+    <div class="container-div">
+        <!-- 第七次人口普查可视化 -->
+        <div class="text content1" style="background:url(../static/img/地图1.webp) no-repeat;width: 100%;height: 700px;background-size:100% 100%;">
+            <div class="header">
+                <div class="header-lesft">
+                    <span>第七次全国人口普查数据可视化</span>
+                </div>
+                <div class="header-time">
+                    <span id="time"></span>
+                </div>
+            </div>
+        </div>
+        <!-- 全国人口情况 -->
+        <div class="text content2">
+            <div class="content-con-one">
+                <div class="left-body-one">
+                    <div class="left-top-one public-bg">
+                        <div class="public-title">全国人口总量及增速
+                        </div>
+                        <div class="title-nav" id="zandz"></div>
+                    </div>
+                    <div class="left-bottom-one public-bg">
+                        <div class="public-title">民族人口情况</div>
+                        <div class="title-nav" id="mzrk"></div>
+                    </div>
+                </div>
+                <div class="right-body-one">
+                    <div class="right-top-one public-bg">
+                        <div class="public-title">省市人口总量top5</div>
+                        <div class="map" id="map-top5"></div>
+                    </div>
+                    <div class="right-bottom-one public-bg">
+                        <div class="public-title">平均家庭户规模</div>
+                        <div class="title-nav" id="jthgm"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 地区人口情况  -->
+        <div class="text content3">
+            <div class="content-con-two">
+                <div class="left-body-two">
+                    <div class="left-top-two public-bg">
+                        <div class="public-title">各省市人口情况</div>
+                        <div class="title-nav" id="ssrk"></div>
+                    </div>
+                    <div class="left-bottom-two public-bg">
+                        <div class="public-title">四大区域人口数占比情况</div>
+                        <div class="title-nav" id="qyrk"></div>
+                    </div>
+                </div>
+                <div class="right-body-two">
+                </div>
+            </div>
+        </div>
+        <!-- 人口性别构成情况 -->
+        <div class="text content4">
+            <div class="content-con-three">
+                <div class="left-body-three">
+                    <div class="left-top-three public-bg">
+                        <div class="public-title">男女性别比</div>
+                        <div class="title-nav" id="zrkxb"></div>
+                    </div>
+                    <div class="left-bottom-three public-bg">
+                        <div class="public-title">各省市性别结构</div>
+                        <div class="biaoge biaoge_list">
+                            <div class="biaoge_listIn">
+                                <ul class="ul_title">
+                                    <li>省市</li>
+                                    <li>总人口（万人）</li>
+                                    <li>男（万人）</li>
+                                    <li>女（万人）</li>
+                                    <li>性别比（%）</li>
+                                </ul>
+                                <div class="ul_list">
+                                    <ul class="ul_con_1">
+                                        <li>广东</li>
+                                        <li>12601</li>
+                                        <li>6687</li>
+                                        <li>5914</li>
+                                        <li>113.08</li>
+                                    </ul>
+                                    <ul class="ul_con_1">
+                                        <li>海南</li>
+                                        <li>1008</li>
+                                        <li>535</li>
+                                        <li>474</li>
+                                        <li>112.86</li>
+                                    </ul>
+                                    <ul class="ul_con_1">
+                                        <li>西藏</li>
+                                        <li>365</li>
+                                        <li>191</li>
+                                        <li>173</li>
+                                        <li>110.32</li>
+                                    </ul>
+                                    <ul class="ul_con_3">
+                                        <li>浙江</li>
+                                        <li>6457</li>
+                                        <li>3368</li>
+                                        <li>3089</li>
+                                        <li>109.04</li>
+                                    </ul>
+                                    <ul class="ul_con_3">
+                                        <li>上海</li>
+                                        <li>2487</li>
+                                        <li>1288</li>
+                                        <li>1200</li>
+                                        <li>107.33</li>
+                                    </ul>
+                                    <ul class="ul_con_3">
+                                        <li>云南</li>
+                                        <li>4721</li>
+                                        <li>2442</li>
+                                        <li>2279</li>
+                                        <li>107.16</li>
+                                    </ul>
+                                    <ul class="ul_con_3">
+                                        <li>广西</li>
+                                        <li>5013</li>
+                                        <li>2592</li>
+                                        <li>2421</li>
+                                        <li>107.04</li>
+                                    </ul>
+                                    <ul class="ul_con_3">
+                                        <li>福建</li>
+                                        <li>4154</li>
+                                        <li>2147</li>
+                                        <li>2007</li>
+                                        <li>106.94</li>
+                                    </ul>
+                                    <ul class="ul_con_3">
+                                        <li>新疆</li>
+                                        <li>2585</li>
+                                        <li>1335</li>
+                                        <li>1250</li>
+                                        <li>106.85</li>
+                                    </ul>
+                                    <ul class="ul_con_3">
+                                        <li>江西</li>
+                                        <li>4519</li>
+                                        <li>2332</li>
+                                        <li>2187</li>
+                                        <li>106.62</li>
+                                    </ul>
+                                    <ul class="ul_con_3">
+                                        <li>天津</li>
+                                        <li>1387</li>
+                                        <li>714</li>
+                                        <li>672</li>
+                                        <li>106.31</li>
+                                    </ul>
+                                    <ul class="ul_con_3">
+                                        <li>湖北</li>
+                                        <li>5775</li>
+                                        <li>2969</li>
+                                        <li>2806</li>
+                                        <li>105.83</li>
+                                    </ul>
+                                    <ul class="ul_con">
+                                        <li>青海</li>
+                                        <li>592</li>
+                                        <li>303</li>
+                                        <li>289</li>
+                                        <li>104.97</li>
+                                    </ul>
+                                    <ul class="ul_con">
+                                        <li>陕西</li>
+                                        <li>3953</li>
+                                        <li>2023</li>
+                                        <li>1930</li>
+                                        <li>104.79</li>
+                                    </ul>
+                                    <ul class="ul_con">
+                                        <li>湖南</li>
+                                        <li>6644</li>
+                                        <li>3400</li>
+                                        <li>3245</li>
+                                        <li>104.77</li>
+                                    </ul>
+                                    <ul class="ul_con">
+                                        <li>北京</li>
+                                        <li>2189</li>
+                                        <li>1120</li>
+                                        <li>1070</li>
+                                        <li>104.65</li>
+                                    </ul>
+                                    <ul class="ul_con">
+                                        <li>贵州</li>
+                                        <li>3856</li>
+                                        <li>1971</li>
+                                        <li>1886</li>
+                                        <li>104.50</li>
+                                    </ul>
+                                    <ul class="ul_con">
+                                        <li>内蒙古</li>
+                                        <li>2405</li>
+                                        <li>1228</li>
+                                        <li>1177</li>
+                                        <li>104.26</li>
+                                    </ul>
+                                    <ul class="ul_con">
+                                        <li>山西</li>
+                                        <li>3492</li>
+                                        <li>1781</li>
+                                        <li>1711</li>
+                                        <li>104.06</li>
+                                    </ul>
+                                    <ul class="ul_con">
+                                        <li>安徽</li>
+                                        <li>6103</li>
+                                        <li>3110</li>
+                                        <li>2992</li>
+                                        <li>103.94</li>
+                                    </ul>
+                                    <ul class="ul_con">
+                                        <li>宁夏</li>
+                                        <li>720</li>
+                                        <li>367</li>
+                                        <li>353</li>
+                                        <li>103.83</li>
+                                    </ul>
+                                    <ul class="ul_con">
+                                        <li>江苏</li>
+                                        <li>8475</li>
+                                        <li>4303</li>
+                                        <li>4172</li>
+                                        <li>103.15</li>
+                                    </ul>
+                                    <ul class="ul_con">
+                                        <li>甘肃</li>
+                                        <li>2502</li>
+                                        <li>1270</li>
+                                        <li>1232</li>
+                                        <li>103.10</li>
+                                    </ul>
+                                    <ul class="ul_con">
+                                        <li>山东</li>
+                                        <li>10153</li>
+                                        <li>5143</li>
+                                        <li>5009</li>
+                                        <li>102.67</li>
+                                    </ul>
+                                    <ul class="ul_con">
+                                        <li>重庆</li>
+                                        <li>3205</li>
+                                        <li>1620</li>
+                                        <li>1585</li>
+                                        <li>102.21</li>
+                                    </ul>
+                                    <ul class="ul_con">
+                                        <li>四川</li>
+                                        <li>8367</li>
+                                        <li>4229</li>
+                                        <li>4139</li>
+                                        <li>102.19</li>
+                                    </ul>
+                                    <ul class="ul_con">
+                                        <li>河北</li>
+                                        <li>7461</li>
+                                        <li>3768</li>
+                                        <li>3693</li>
+                                        <li>102.02</li>
+                                    </ul>
+                                    <ul class="ul_con">
+                                        <li>河南</li>
+                                        <li>9937</li>
+                                        <li>4983</li>
+                                        <li>4953</li>
+                                        <li>100.60</li>
+                                    </ul>
+                                    <ul class="ul_con">
+                                        <li>黑龙江</li>
+                                        <li>3185</li>
+                                        <li>1595</li>
+                                        <li>1590</li>
+                                        <li>100.35</li>
+                                    </ul>
+                                    <ul class="ul_con_2">
+                                        <li>辽宁</li>
+                                        <li>4259</li>
+                                        <li>2126</li>
+                                        <li>2133</li>
+                                        <li>99.70</li>
+                                    </ul>
+                                    <ul class="ul_con_2">
+                                        <li>吉林</li>
+                                        <li>2407</li>
+                                        <li>1202</li>
+                                        <li>1206</li>
+                                        <li>99.69</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="right-body-three">
+                    <div class="right-top-three public-bg">
+                        <div class="public-title">出生性别比</div>
+                        <div class="title-nav" id="csxb"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- 人口年龄构成情况 -->
+        <div class="text content5">
+            <div class="content-con-four">
+                <div class="left-body-four">
+                    <div class="left-top-four public-bg">
+                        <div class="public-title">全国年龄构成</div>
+                        <div class="title-nav" id="qgnlgc"></div>
+                    </div>
+                    <div class="left-bottom-four public-bg">
+                        <div class="public-title">人口抚养比</div>
+                        <div class="title-nav" id="rkfyb"></div>
+                    </div>
+                </div>
+                <div class="right-body-four">
+                </div>
+            </div>
+        </div>
+        <!-- 人口受教育程度情况 -->
+        <div class="text content6">
+            <div class="content-con-five">
+                <div class="left-body-five">
+                    <div class="left-top-five public-bg">
+                        <div class="public-title">人口受教育程度</div>
+                        <div class="title-nav" id="sjycd"></div>
+                    </div>
+                </div>
+                <div class="right-body-five">
+                    <div class="right-top-five public-bg">
+                        <div class="public-title">文盲率</div>
+                        <div class="title-nav" id="wml"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 城乡人口和流动人口情况 -->
+        <div class="text content7">
+            <div class="content-con-six">
+                <div class="left-body-six">
+                    <div class="left-top-six public-bg">
+                        <div class="public-title">城乡人口</div>
+                        <div class="title-nav" id="cxrk"></div>
+                    </div>
+                </div>
+                <div class="right-body-six">
+                    <div class="right-top-six public-bg">
+                        <div class="public-title">流动人口</div>
+                        <div class="title-nav" id="ldrk"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script src="../static/js/echarts.min.js"></script>
+    <script src="../static/js/daohang.js"></script>
+    <script src="../static/js/china.js"></script>
+    <script src="../static/js/index.js"></script>
+
+</body>
+
+</html>
+<script>
+    //顶部时间
+    function getTime() {
+        var myDate = new Date();
+        var myYear = myDate.getFullYear(); //获取完整的年份(4位,1970-????)
+        var myMonth = myDate.getMonth() + 1; //获取当前月份(0-11,0代表1月)
+        var myToday = myDate.getDate(); //获取当前日(1-31)
+        var myDay = myDate.getDay(); //获取当前星期X(0-6,0代表星期天)
+        var myHour = myDate.getHours(); //获取当前小时数(0-23)
+        var myMinute = myDate.getMinutes(); //获取当前分钟数(0-59)
+        var mySecond = myDate.getSeconds(); //获取当前秒数(0-59)
+        var week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+        var nowTime;
+
+        nowTime = myYear + '年' + fillZero(myMonth) + '月' + fillZero(myToday) + '日' + '&nbsp;&nbsp;' + fillZero(myHour) + ':' + fillZero(myMinute) + ':' + fillZero(mySecond) + '&nbsp;&nbsp;' + week[myDay] + '&nbsp;&nbsp;';
+        //console.log(nowTime);
+        $('#time').html(nowTime);
+    };
+
+    function fillZero(str) {
+        var realNum;
+        if (str < 10) {
+            realNum = '0' + str;
+        } else {
+            realNum = str;
+        }
+        return realNum;
+    }
+    setInterval(getTime, 1000);
+</script>

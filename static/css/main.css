@@ -1,0 +1,613 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.public-bg {
+    background: rgba(12, 26, 63, 0.3);
+}
+
+.public-title {
+    width: calc(100% - 20px);
+    height: 30px;
+    position: relative;
+    top: 0;
+    left: 5px;
+    color: white;
+    padding-left: 16px;
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.public-title:before {
+    width: 4px;
+    height: 20px;
+    top: 5px;
+    position: absolute;
+    content: "";
+    background: #2997e4;
+    border-radius: 2px;
+    left: 5px;
+}
+
+.header {
+    height: 70px;
+    width: 100%;
+    /*    border: 1px solid red;*/
+}
+
+.header .header-lesft {
+    width: 50%;
+    float: left;
+    line-height: 70px;
+    margin: 80px 50px;
+}
+
+.header .header-lesft span {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 43px;
+    letter-spacing: 5px;
+    /* padding: 0 20px; */
+}
+
+.header .header-time {
+    line-height: 70px;
+    float: left;
+    text-align: left;
+    padding-right: 20px;
+    margin: 0px 50px;
+}
+
+.header .header-time span {
+    color: #fff;
+    font-size: 30px;
+}
+
+.container-div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.title-nav {
+    width: 100%;
+    height: calc(100% - 40px);
+}
+
+
+/* 全国人口情况 */
+
+.content-con-one {
+    height: 100%;
+}
+
+.left-body-one {
+    width: 50%;
+    height: 98%;
+    float: left;
+    margin: 0.5% 0;
+}
+
+.left-body-one .left-top-one {
+    width: 98%;
+    height: 50%;
+}
+
+.left-body-one .left-bottom-one {
+    width: 98%;
+    height: 49%;
+    margin-top: 1%;
+}
+
+.right-body-one {
+    width: 50%;
+    height: 98%;
+    float: right;
+    margin: 0.5% 0;
+}
+
+.right-body-one .right-top-one {
+    width: 100%;
+    height: 50%;
+}
+
+.right-top-one .map {
+    width: 100%;
+    height: 100%;
+    margin-top: -5%;
+}
+
+.right-body-one .right-bottom-one {
+    width: 100%;
+    height: 49%;
+    margin-top: 1%;
+}
+
+
+/* 地区人口情况 */
+
+.content-con-two {
+    height: 100%;
+}
+
+.left-body-two {
+    width: 50%;
+    height: 100%;
+    float: left;
+    margin: 1% 0;
+}
+
+.left-body-two .left-top-two {
+    width: 200%;
+    height: 65%;
+}
+
+.left-body-two .left-bottom-two {
+    width: 200%;
+    height: 32%;
+}
+
+.right-body-two {
+    width: 50%;
+    height: 100%;
+    float: right;
+    margin: 1% 0;
+}
+
+
+/* 人口性比构成情况 */
+
+.content-con-three {
+    height: 100%;
+}
+
+.left-body-three {
+    width: 50%;
+    height: 98%;
+    float: left;
+    margin: -1.3% 0 -1.5% 0;
+}
+
+.left-body-three .left-top-three {
+    width: 98%;
+    height: 39%;
+}
+
+.left-body-three .left-bottom-three {
+    width: 200%;
+    height: 60%;
+    margin-top: 1%;
+    overflow-y: scroll;
+}
+
+.right-body-three {
+    width: 50%;
+    height: 98%;
+    float: right;
+    margin: -1.3% 0 0 0;
+}
+
+.right-body-three .right-top-three {
+    width: 100%;
+    height: 39%;
+}
+
+.right-body-three .right-bottom-three {
+    width: 100%;
+    height: 60%;
+    margin-top: 1%;
+}
+
+.biaoge {
+    margin-top: 10px;
+}
+
+.biaoge_list {
+    overflow: hidden;
+    position: relative;
+}
+
+.biaoge_list .biaoge_listIn .ul_list {
+    overflow: hidden;
+    position: relative;
+}
+
+
+/*.biaoge_list .biaoge_listIn .ul_listIn{*/
+
+
+/*-webkit-animation: 4s gundong linear infinite normal;*/
+
+
+/*  animation: 30s gundong linear infinite normal;*/
+
+
+/*  position: relative;}*/
+
+
+/*@keyframes gundong {*/
+
+
+/*  0% {*/
+
+
+/*      -webkit-transform: translate3d(0, 2.5vh, 0);*/
+
+
+/*      transform: translate3d(0, 2.5vh, 0);*/
+
+
+/*  }*/
+
+
+/*  100% {*/
+
+
+/*      -webkit-transform: translate3d(0, -80vh, 0);*/
+
+
+/*      transform: translate3d(0, -80vh, 0);*/
+
+
+/*  }*/
+
+
+/*}*/
+
+.biaoge_list ul {
+    display: flex;
+    display: -webkit-flex;
+    width: 100%;
+}
+
+.biaoge_list .ul_title {
+    background: linear-gradient(left, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+    background: -ms-linear-gradient(left, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+}
+
+.ul_list .ul_con_1 {
+    background: linear-gradient(left, rgba(255, 255, 255, 0.1), rgba(255, 0, 0, 0.5), rgba(255, 255, 255, 0.1));
+    background: -ms-linear-gradient(left, rgba(255, 255, 255, 0.1), rgba(255, 0, 0, 0.5), rgba(255, 255, 255, 0.1));
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.1), rgba(255, 0, 0, 0.5), rgba(255, 255, 255, 0.1));
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.1), rgba(255, 0, 0, 0.5), rgba(255, 255, 255, 0.1));
+}
+
+.ul_list .ul_con_3 {
+    background: linear-gradient(left, rgba(255, 255, 255, 0.1), rgb(173, 162, 56), rgba(255, 255, 255, 0.1));
+    background: -ms-linear-gradient(left, rgba(255, 255, 255, 0.1), rgb(173, 162, 56), rgba(255, 255, 255, 0.1));
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.1), rgb(173, 162, 56), rgba(255, 255, 255, 0.1));
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.1), rgb(173, 162, 56), rgba(255, 255, 255, 0.1));
+}
+
+.ul_list .ul_con {
+    background: linear-gradient(left, rgba(255, 255, 255, 0.1), rgb(99, 161, 68), rgba(255, 255, 255, 0.1));
+    background: -ms-linear-gradient(left, rgba(255, 255, 255, 0.1), rgb(99, 161, 68), rgba(255, 255, 255, 0.1));
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.1), rgb(99, 161, 68), rgba(255, 255, 255, 0.1));
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.1), rgb(99, 161, 68), rgba(255, 255, 255, 0.1));
+}
+
+.ul_list .ul_con_2 {
+    background: linear-gradient(left, rgba(255, 255, 255, 0.1), rgb(63, 78, 136), rgba(255, 255, 255, 0.1));
+    background: -ms-linear-gradient(left, rgba(255, 255, 255, 0.1), rgb(63, 78, 136), rgba(255, 255, 255, 0.1));
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.1), rgb(63, 78, 136), rgba(255, 255, 255, 0.1));
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.1), rgb(63, 78, 136), rgba(255, 255, 255, 0.1));
+}
+
+
+/*.biaoge_list .ul_con{*/
+
+
+/*border-bottom:0.08rem solid rgba(28,204,255);}*/
+
+.biaoge_list ul li {
+    width: 20%;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+    height: 2rem;
+    line-height: 2rem;
+}
+
+.biaoge_list ul li:frist-child {
+    text-align: center;
+}
+
+
+/* 人口年龄构成情况 */
+
+.content-con-four {
+    height: 100%;
+}
+
+.left-body-four {
+    width: 50%;
+    height: 100%;
+    float: left;
+    margin: 0.5% 0;
+}
+
+.left-body-four .left-top-four {
+    width: 200%;
+    height: 49%;
+}
+
+.left-body-four .left-bottom-four {
+    width: 200%;
+    height: 49%;
+}
+
+.right-body-four {
+    width: 50%;
+    height: 100%;
+    float: right;
+    margin: 0.5% 0;
+}
+
+
+/* 人口受教育程度 */
+
+.content-con-five {
+    height: 100%;
+}
+
+.left-body-five {
+    width: 64%;
+    height: 100%;
+    float: left;
+    margin: -0.5% 0;
+}
+
+.left-body-five .left-top-five {
+    width: 100%;
+    height: 95%;
+}
+
+.right-body-five {
+    width: 35%;
+    height: 100%;
+    float: right;
+    margin: -0.5% 0;
+}
+
+.right-body-five .right-top-five {
+    width: 100%;
+    height: 95%;
+}
+
+
+/* 城乡人口和流动人口情况 */
+
+.content-con-six {
+    height: 98%;
+}
+
+.left-body-six {
+    width: 52%;
+    height: 100%;
+    float: left;
+    margin: 1% 0 0 0;
+}
+
+.left-body-six .left-top-six {
+    width: 100%;
+    height: 95%;
+}
+
+.right-body-six {
+    width: 47%;
+    height: 100%;
+    float: right;
+    margin: 1% 0 0 0;
+}
+
+.right-body-six .right-top-six {
+    width: 100%;
+    height: 95%;
+}
+
+:root {
+    --accent-color: #45494E;
+    --gradient-color: #FBFBFB;
+}
+
+a:after {
+    content: "";
+    background: #FBFBFB;
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+    height: 3px;
+    width: 0;
+    transition: .5s;
+    transition-delay: .2s;
+}
+
+.menu {
+    position: fixed;
+    top: 100px;
+    left: 80px;
+    width: 120px;
+    font-size: 12px;
+    z-index: 999999;
+}
+
+.menu>ol {
+    list-style: none;
+    padding: 0;
+}
+
+.menu>ol>li {
+    background: #3c3c3c;
+    border-left: 5px solid var(--gradient-color);
+    margin-bottom: 1px;
+    position: relative;
+    transition: .5s;
+}
+
+.menu>ol>li:nth-child(1) {
+    --accent-color: #FDA085;
+    --gradient-color: #afbba7;
+}
+
+.menu>ol>li:nth-child(2) {
+    --accent-color: #AFBBA7;
+    --gradient-color: #6FD6FF;
+}
+
+.menu>ol>li:nth-child(3) {
+    --accent-color: #6FD6FF;
+    --gradient-color: #A890FE;
+}
+
+.menu>ol>li:nth-child(4) {
+    --accent-color: #A890FE;
+    --gradient-color: #1EAE98;
+}
+
+.menu>ol>li:nth-child(5) {
+    --accent-color: #1EAE98;
+    --gradient-color: #FE90AF;
+}
+
+.menu>ol>li:nth-child(6) {
+    --accent-color: #FE90AF;
+    --gradient-color: #F6D365;
+}
+
+.menu>ol>li:nth-child(7) {
+    --accent-color: #F6D365;
+    --gradient-color: #6FD6FF;
+}
+
+.menu>ol>li a {
+    color: #FBFBFB;
+    display: block;
+    padding: 15px;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.menu>ol>.active:after {
+    background: linear-gradient(to left, var(--accent-color), var(--gradient-color));
+    max-width: 800px;
+}
+
+.menu>ol>li:focus .sub-menu,
+.menu>ol>li:focus-within .sub-menu {
+    max-height: 500px;
+}
+
+.menu>ol>li:after {
+    background: #3c3c3c;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: .5s;
+    max-width: 0;
+    overflow: hidden;
+}
+
+a:hover:after {
+    width: 50px;
+}
+
+a:after {
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.active>a:after {
+    width: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.menu>ol {
+    display: block;
+    max-width: none;
+    text-align: center;
+}
+
+.menu>ol>li {
+    border-top: 5px solid var(--accent-color);
+    border-left: 0;
+    display: inline-block;
+    margin-left: -55px;
+    vertical-align: top;
+    width: 200px;
+}
+
+.menu>ol>.active:after {
+    background: linear-gradient(to bottom, var(--accent-color), var(--gradient-color));
+    border-radius: 3px;
+    top: -5px;
+    bottom: -5px;
+    left: -5px;
+    right: -5px;
+}
+
+.content1 {
+    padding: 0 250px;
+    height: 700px;
+    /* background: -webkit-linear-gradient(to bottom, #fda0856b, #f6d36585);
+  background: linear-gradient(to bottom, #fda0856b, #f6d36585); */
+    background-color: #3c3c3c;
+}
+
+.content2 {
+    padding: 0 0 0 250px;
+    height: 1200px;
+    background: -webkit-linear-gradient(to right, #0D4D5E, #58B4C1);
+    background: linear-gradient(to right, #0D4D5E, #58B4C1);
+}
+
+.content3 {
+    padding: 0 0 0 250px;
+    height: 1200px;
+    background: -webkit-linear-gradient(to left, #0D4D5E, #58B4C1);
+    background: linear-gradient(to left, #0D4D5E, #58B4C1);
+}
+
+.content4 {
+    padding: 0 0 0 250px;
+    height: 1200px;
+    background: -webkit-linear-gradient(to right, #0D4D5E, #58B4C1);
+    background: linear-gradient(to right, #0D4D5E, #58B4C1);
+}
+
+.content5 {
+    padding: 0 0 0 250px;
+    height: 1600px;
+    background: -webkit-linear-gradient(to left, #0D4D5E, #58B4C1);
+    background: linear-gradient(to left, #0D4D5E, #58B4C1);
+}
+
+.content6 {
+    padding: 0 0 0 250px;
+    height: 700px;
+    background: -webkit-linear-gradient(to right, #0D4D5E, #58B4C1);
+    background: linear-gradient(to right, #0D4D5E, #58B4C1);
+}
+
+.content7 {
+    padding: 0 0 0 250px;
+    height: 600px;
+    background: -webkit-linear-gradient(to left, #0D4D5E, #58B4C1);
+    background: linear-gradient(to left, #0D4D5E, #58B4C1);
+}
